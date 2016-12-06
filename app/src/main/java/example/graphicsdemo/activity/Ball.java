@@ -8,9 +8,7 @@ import android.view.animation.Interpolator;
 
 import java.util.Random;
 
-import example.graphicsdemo.animation.Animation;
-
-public class Ball implements Animation {
+public class Ball {
 
     private static final Interpolator interpolator = new BounceInterpolator();
     private static final Random random = new Random();
@@ -35,8 +33,7 @@ public class Ball implements Animation {
         this.left = left;
         this.frame = frame;
     }
-
-    @Override
+    
     public void draw(Canvas canvas) {
         float fraction = interpolator.getInterpolation((float) frame / FRAMES);
 
