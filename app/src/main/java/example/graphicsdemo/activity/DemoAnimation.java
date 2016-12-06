@@ -8,20 +8,20 @@ public class DemoAnimation implements Animation {
 
     private static final int COUNT = 10;
 
-    private Bounce[] balls;
+    private Ball[] array;
 
     @Override
     public void draw(Canvas canvas) {
-        if (balls == null) {
-            balls = new Bounce[COUNT];
-            for (int i=0; i<balls.length; i++) {
-                balls[i] = new Bounce(canvas.getWidth());
+        if (array == null) {
+            array = new Ball[COUNT];
+            for (int i = 0; i< array.length; i++) {
+                array[i] = new Ball(canvas.getWidth());
             }
         }
 
         canvas.drawARGB(255, 0, 0, 0);
 
-        for (Bounce ball : balls) {
+        for (Ball ball : array) {
             ball.draw(canvas);
         }
     }

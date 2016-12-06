@@ -10,7 +10,7 @@ import java.util.Random;
 
 import example.graphicsdemo.animation.Animation;
 
-public class Bounce implements Animation {
+public class Ball implements Animation {
 
     private static final Interpolator interpolator = new BounceInterpolator();
     private static final Random random = new Random();
@@ -22,13 +22,13 @@ public class Bounce implements Animation {
     private float left;
     private int frame;
 
-    public Bounce(int canvasWidth) {
+    public Ball(int canvasWidth) {
         this(random.nextFloat() * (canvasWidth - DIAMETER),
                 random.nextInt(FRAMES),
                 Color.argb(255, random.nextInt(255), random.nextInt(255), random.nextInt(255)));
     }
 
-    public Bounce(float left, int frame, int color) {
+    public Ball(float left, int frame, int color) {
         paint = new Paint();
         paint.setColor(color);
 
